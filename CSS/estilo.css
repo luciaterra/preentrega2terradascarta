@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../image/fondo1.jpg');
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+
+#encabezado {
+    display: grid;
+    grid-template-areas: 
+    "nav header header"
+    "nav footer footer";
+    grid-template-rows: max-content;
+    grid-template-columns: auto;
+    color: rgba(0, 110, 255, 0.853);
+    padding: 15px;
+}
+
+.main {
+    display: grid;
+    background: linear-gradient(to bottom #c9f1f5, #82b8ee); 
+    background-color: rgb(172, 195, 240);
+    list-style: none;
+    }
+
+.main:hover{
+    background-color: cornflowerblue;
+    height: 150px;
+    width: 200px;
+    transition: all 8s;
+}
+
+div.navIzq{
+    display: grid;
+}
+
+div.navDer{
+    display: inline-block;
+    background-image: linear-gradient(to right #c9f1f5, #d0f5c9); 
+}
+
+.caja{
+    display: grid;
+    color:  black;
+    background: linear-gradient(to right, #c9f1f5, #d0f5c9);
+    color: rgb(62, 131, 187);
+}
+
+@keyframes imagen {
+    0%{
+        width: 300px;
+        height: 300px;
+    }
+
+    50%{
+        width: 500px;
+        height: 300px;
+    }
+    
+}
+
+.bordesRedondeados{
+    animation-name: imagen;
+    animation-iteration-count: initial;
+    animation-duration: 3s;
+    animation-delay: 1s;  
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+
+    div.navIzq {
+        grid-area: navIzq;
+        background-color: aliceblue;
+        color: yellow;
+    }
+
+
+    li {
+        padding: 10px;
+        list-style-type: none;
+    }
+
+    div.navDer {
+        grid-area: navDer;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .gridContainer {
+        display: grid;
+        grid-template-areas:
+            "navIzq navIzq header header navDer navDer""parrafo parrafo parrafo img img img""footer footer footer footer footer footer";
+        grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+        grid-template-rows: 100px auto 200px;
+    }
+
+    header {
+        grid-area: header;
+        text-align: center;
+    }
+
+    div.navIzq {
+        grid-area: navIzq;
+    }
+
+    header {
+        border-bottom: 2px solid black;
+    }
+
+    header ul li {
+        display: inline-block;
+        margin: 20px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .bordesRedondeados {
+        border-radius: 20px;
+        color: beige;
+    }
+
+    .textos {
+        text-align: center;
+        font-size: 20px;
+        background-image: linear-gradient(to right #c9f1f5, #d0f5c9);
+    }
+
+
+    footer {
+        color: rgba(1, 6, 12, 0.853);
+        text-align: center;
+        }
+
+    footer ul li {
+        color: rgba(1, 8, 17, 0.853);
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+     }
